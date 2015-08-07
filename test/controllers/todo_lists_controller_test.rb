@@ -18,7 +18,7 @@ class TodoListsControllerTest < ActionController::TestCase
 
   test "should create todo_list" do
     assert_difference('TodoList.count') do
-      post :create, todo_list: { descripiton: @todo_list.descripiton, title: @todo_list.title }
+      post :create, todo_list: { description: @todo_list.description, title: @todo_list.title }
     end
 
     assert_redirected_to todo_list_path(assigns(:todo_list))
@@ -35,7 +35,7 @@ class TodoListsControllerTest < ActionController::TestCase
   end
 
   test "should update todo_list" do
-    patch :update, id: @todo_list, todo_list: { descripiton: @todo_list.descripiton, title: @todo_list.title }
+    patch :update, id: @todo_list, todo_list: { description: @todo_list.description, title: @todo_list.title }
     assert_redirected_to todo_list_path(assigns(:todo_list))
   end
 
